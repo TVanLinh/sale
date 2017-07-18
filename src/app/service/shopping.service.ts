@@ -33,4 +33,22 @@ export class ShoppingService {
     }
     return all;
   }
+
+  public isExistsProduct(product: Product) {
+     for(let item of this.list){
+       if(item.product.id == product.id){
+         return true;
+       }
+     }
+     return false;
+  }
+
+ public getIngredientByIdProduct(id: number) {
+    for(let item of this.list){
+      if(item.product.id == id){
+        return item;
+      }
+    }
+    return null;
+  }
 }

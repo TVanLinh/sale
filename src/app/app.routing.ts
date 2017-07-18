@@ -15,7 +15,6 @@ const  routing: Routes= [
     {path: "detail", component: DetailComponent }
   ]},
   {path: "shop", component: ShoppingComponent}
-  // {path: "", component: ShoppingComponent}
 ];
 
 @NgModule({
