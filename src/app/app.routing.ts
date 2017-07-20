@@ -8,9 +8,9 @@ import {DetailComponent} from "./products/detail/detail.component";
 
 const  routing: Routes= [
   // {path: "", redirectTo: 'product', pathMatch: 'full'},
-    {path: "", component: PageComponent, children:[
+     {path: "", component: PageComponent, children:[
      {path: "", component: ProductListComponent},
-    {path: "product", component: ProductListComponent},
+     {path: "product", component: ProductListComponent},
     // {path: "detail/:id", component: DetailComponent }
     {path: "detail", component: DetailComponent }
   ]},

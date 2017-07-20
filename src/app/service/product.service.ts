@@ -7,7 +7,7 @@ export class ProductService {
   private list: Product[] = [];
   subjectList = new Subject<Product[]>();
   subjectItem = new Subject<Product>();
-
+  subject =  new Subject();
   getProducts() {
     this.list =[];
     const pro = new Product();

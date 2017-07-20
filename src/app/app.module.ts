@@ -29,6 +29,10 @@ import {ShoppingService} from "./service/shopping.service";
 import {Ingredient} from "./model/ingrendient.model";
 import {FormsModule} from "@angular/forms";
 import { CustomerComponent } from './shopping/customer/customer.component';
+import {TaskService} from "./service/task.service";
+import {HttpModule} from "@angular/http";
+import {Page} from "./model/page.model";
+import { PaginationComponent } from './core/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -51,16 +55,25 @@ import { CustomerComponent } from './shopping/customer/customer.component';
     ShoppingComponent,
     PageComponent,
     CartComponent,
-    CustomerComponent
+    CustomerComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     ProductRouting,
     AppRouting,
-    FormsModule
+    FormsModule,
+    HttpModule
+
   ],
-  providers: [Product, ProductService,ShoppingService, Ingredient],
+  providers: [Product,
+    ProductService,
+    ShoppingService,
+    Ingredient,
+    TaskService,
+    Page
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
