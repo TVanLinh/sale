@@ -7,7 +7,7 @@ import {ProductListComponent} from "./products/product-list/product-list.compone
 import {DetailComponent} from "./products/detail/detail.component";
 
 const  routing: Routes= [
-  // {path: "", redirectTo: 'product', pathMatch: 'full'},
+     // {path: "**", component: ProductListComponent},
      {path: "", component: PageComponent, children:[
      {path: "", component: ProductListComponent},
      {path: "product", component: ProductListComponent},
